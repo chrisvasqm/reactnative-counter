@@ -18,26 +18,23 @@ const Counter = () => {
         <>
             <View style={{
                 marginBottom: 8,
-                justifyContent: "center",
-                alignItems: "center",
+                alignItems: 'center'
             }}>
-                <Text style={{ fontSize: 24 }}>Counter</Text>
+                <Text style={styles.title}>Counter</Text>
             </View>
 
-            <View
-                style={{
-                    flexDirection: 'row',
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: 10,
-                }}
-            >
+            <View style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: 10,
+            }}>
                 <Button
                     title='   -   '
                     disabled={counter === 0}
                     onPress={handleDecrease} />
 
-                <Text>{counter}</Text>
+                <Text style={styles.counter}>{counter}</Text>
 
                 <Button
                     title='   +   '
@@ -45,6 +42,11 @@ const Counter = () => {
             </View>
         </>
     )
+}
+
+const styles = {
+    title: { fontSize: 24 },
+    counter: { fontSize: 16 }
 }
 
 export default Counter
